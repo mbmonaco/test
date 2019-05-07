@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.service.spi.ServiceException;
 
 import com.trimix.model.Persona;
+import com.trimix.model.dto.PersonaDTO;
 
 public interface IPersonaService {
 	
@@ -19,6 +20,8 @@ public interface IPersonaService {
 	public List<Persona> filter(String nombre, String tipodoc) throws ServiceException;
 	
 	public void delete(Persona persona) throws ServiceException;
+	
+	public PersonaDTO loadDTO (Persona persona) throws ServiceException;
 	
 
 }

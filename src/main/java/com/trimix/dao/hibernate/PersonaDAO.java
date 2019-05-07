@@ -87,7 +87,7 @@ public class PersonaDAO implements IPersonaDAO {
 		List<Persona> list = null;
 		Session session = this.sessionFactory.openSession();
 		try {
-			String query = " FROM Persona p WHERE p.perNombre LIKE '%" + nombre + "%'";
+			String query = " FROM Persona p WHERE lower(p.perNombre) LIKE '%" + nombre.toLowerCase() + "%'";
 			if (!tipodoc.equals("Todas")) {
 				query = query + " AND p.perTipoDocumento LIKE '" + tipodoc + "'";
 			}

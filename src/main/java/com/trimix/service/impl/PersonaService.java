@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.trimix.dao.hibernate.PersonaDAO;
 import com.trimix.model.Persona;
+import com.trimix.model.dto.PersonaDTO;
 import com.trimix.service.IPersonaService;
 
 @Service
@@ -45,6 +46,11 @@ public class PersonaService implements IPersonaService {
 	public void delete(Persona persona) throws ServiceException {
 		personaDAO.delete(persona);
 
+	}
+	
+	@Override
+	public PersonaDTO loadDTO(Persona persona) throws ServiceException {
+		return new PersonaDTO(persona);
 	}
 
 }

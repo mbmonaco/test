@@ -7,10 +7,10 @@
 	<packaging>war</packaging>
 	<name>aplicacion</name>
 	<description>abm personas</description>
-	
-	
-		
-	<properties>	
+
+
+
+	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -37,7 +37,7 @@
 			<artifactId>spring-orm</artifactId>
 			<version>4.3.10.RELEASE</version>
 		</dependency>
-				
+
 		<!-- Hibernate ORM -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -60,9 +60,9 @@
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.5.2</version>
-		</dependency>	
-		
-		
+		</dependency>
+
+
 		<!-- Mysql Connector -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -83,7 +83,15 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
 	</dependencies>
+
+
 
 	<build>
 		<finalName>aplicacion</finalName>
@@ -121,6 +129,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-  
-  
+
+
 </project>
